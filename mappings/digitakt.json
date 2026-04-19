@@ -1,0 +1,75 @@
+{
+  "_info": "Digitakt mapping — right hand pads (pentatonic), left hand CC modulation, hard velocity curve.",
+
+  "midi_channel": 9,
+  "velocity_fixed": null,
+  "velocity_curve": "hard",
+  "gesture_note_duration": 0.08,
+
+  "scale": {
+    "name": "pentatonic",
+    "root": "C"
+  },
+
+  "right_hand": {
+    "axis":           "palm_y",
+    "note_min":       48,
+    "note_max":       72,
+    "trigger_mode":   "retrigger",
+    "polyphonic":     false,
+    "velocity_axis":  "vel_y",
+    "velocity_curve": "hard",
+    "min_confidence": 0.4,
+    "cc_send": [
+      { "cc_number": 16, "cc_axis": "palm_x",  "_comment": "CC16 — Pan / sample start" },
+      { "cc_number": 17, "cc_axis": "pinch",   "_comment": "CC17 — Filter frequency" }
+    ]
+  },
+
+  "left_hand": {
+    "axis":           "palm_y",
+    "note_min":       36,
+    "note_max":       48,
+    "trigger_mode":   "gate",
+    "polyphonic":     false,
+    "velocity_axis":  "vel_y",
+    "velocity_curve": "hard",
+    "min_confidence": 0.4,
+    "cc_send": [
+      { "cc_number": 1,  "cc_axis": "grab",   "_comment": "CC1  — Mod / LFO depth" },
+      { "cc_number": 10, "cc_axis": "roll",   "_comment": "CC10 — Pan" }
+    ]
+  },
+
+  "circle_cc": {
+    "cc_number": 17,
+    "step": 6
+  },
+
+  "gestures": {
+    "swipe_left":   { "type": "swipe", "direction": "left",   "note": 36, "velocity": 127 },
+    "swipe_right":  { "type": "swipe", "direction": "right",  "note": 48, "velocity": 127 },
+    "swipe_up":     { "type": "swipe", "direction": "up",     "note": 60, "velocity": 120 },
+    "swipe_down":   { "type": "swipe", "direction": "down",   "note": 24, "velocity": 127 },
+
+    "key_tap_right_0": { "type": "keyTap", "hand": "right", "finger": 0, "note": 48, "velocity": 127 },
+    "key_tap_right_1": { "type": "keyTap", "hand": "right", "finger": 1, "note": 50, "velocity": 127 },
+    "key_tap_right_2": { "type": "keyTap", "hand": "right", "finger": 2, "note": 53, "velocity": 127 },
+    "key_tap_right_3": { "type": "keyTap", "hand": "right", "finger": 3, "note": 55, "velocity": 127 },
+    "key_tap_right_4": { "type": "keyTap", "hand": "right", "finger": 4, "note": 60, "velocity": 127 },
+
+    "screen_tap_right_0": { "type": "screenTap", "hand": "right", "finger": 0, "note": 36, "velocity": 100 },
+    "screen_tap_right_1": { "type": "screenTap", "hand": "right", "finger": 1, "note": 38, "velocity": 100 },
+    "screen_tap_right_2": { "type": "screenTap", "hand": "right", "finger": 2, "note": 41, "velocity": 100 },
+    "screen_tap_right_3": { "type": "screenTap", "hand": "right", "finger": 3, "note": 43, "velocity": 100 },
+    "screen_tap_right_4": { "type": "screenTap", "hand": "right", "finger": 4, "note": 48, "velocity": 100 }
+  },
+
+  "_notes": [
+    "MIDI channel 10 (index 9) — Digitakt auto-channel default.",
+    "Scale: C pentatonic — finger taps land on C D E G A C (no semitones).",
+    "velocity_curve 'hard' = punchy response suited for drum machine pads.",
+    "Left hand gate mode — note held for as long as hand is in frame.",
+    "Circle CW sweeps CC17 (filter freq) up by 6 per frame for fast resonance."
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "_info": "Extended Minitaur mapping — scale quantization, velocity curves, retrigger mono mode.",
+
+  "midi_channel": 0,
+  "velocity_fixed": null,
+  "velocity_curve": "soft",
+  "gesture_note_duration": 0.10,
+
+  "scale": {
+    "name": "minor",
+    "root": "A"
+  },
+
+  "left_hand": {
+    "axis":           "palm_y",
+    "note_min":       36,
+    "note_max":       48,
+    "trigger_mode":   "retrigger",
+    "polyphonic":     false,
+    "velocity_axis":  "vel_y",
+    "velocity_curve": "soft",
+    "min_confidence": 0.35,
+    "cc_send": true,
+    "cc_number": 74,
+    "cc_axis":   "grab"
+  },
+
+  "right_hand": {
+    "axis":           "palm_y",
+    "note_min":       48,
+    "note_max":       60,
+    "trigger_mode":   "retrigger",
+    "polyphonic":     false,
+    "velocity_axis":  "vel_y",
+    "velocity_curve": "soft",
+    "min_confidence": 0.35,
+    "cc_send": true,
+    "cc_number": 71,
+    "cc_axis":   "roll"
+  },
+
+  "circle_cc": {
+    "cc_number": 74,
+    "step": 4
+  },
+
+  "gestures": {
+    "swipe_left":   { "type": "swipe", "direction": "left",   "note": 36, "velocity": 110 },
+    "swipe_right":  { "type": "swipe", "direction": "right",  "note": 43, "velocity": 110 },
+    "swipe_up":     { "type": "swipe", "direction": "up",     "note": 48, "velocity": 100 },
+    "swipe_down":   { "type": "swipe", "direction": "down",   "note": 24, "velocity": 120 },
+    "swipe_toward": { "type": "swipe", "direction": "toward", "note": 45, "velocity": 100 },
+    "swipe_away":   { "type": "swipe", "direction": "away",   "note": 38, "velocity": 95  },
+
+    "screen_tap_right_0": { "type": "screenTap", "hand": "right", "finger": 0, "note": 24, "velocity": 110 },
+    "screen_tap_right_1": { "type": "screenTap", "hand": "right", "finger": 1, "note": 26, "velocity": 110 },
+    "screen_tap_right_2": { "type": "screenTap", "hand": "right", "finger": 2, "note": 28, "velocity": 110 },
+    "screen_tap_right_3": { "type": "screenTap", "hand": "right", "finger": 3, "note": 29, "velocity": 110 },
+    "screen_tap_right_4": { "type": "screenTap", "hand": "right", "finger": 4, "note": 31, "velocity": 110 },
+
+    "screen_tap_left_0":  { "type": "screenTap", "hand": "left", "finger": 0, "note": 12, "velocity": 110 },
+    "screen_tap_left_1":  { "type": "screenTap", "hand": "left", "finger": 1, "note": 14, "velocity": 110 },
+    "screen_tap_left_2":  { "type": "screenTap", "hand": "left", "finger": 2, "note": 16, "velocity": 110 },
+    "screen_tap_left_3":  { "type": "screenTap", "hand": "left", "finger": 3, "note": 17, "velocity": 110 },
+    "screen_tap_left_4":  { "type": "screenTap", "hand": "left", "finger": 4, "note": 19, "velocity": 110 },
+
+    "key_tap_right_0": { "type": "keyTap", "hand": "right", "finger": 0, "note": 48, "velocity": 127 },
+    "key_tap_right_1": { "type": "keyTap", "hand": "right", "finger": 1, "note": 50, "velocity": 127 },
+    "key_tap_right_2": { "type": "keyTap", "hand": "right", "finger": 2, "note": 52, "velocity": 127 },
+    "key_tap_right_3": { "type": "keyTap", "hand": "right", "finger": 3, "note": 53, "velocity": 127 },
+    "key_tap_right_4": { "type": "keyTap", "hand": "right", "finger": 4, "note": 55, "velocity": 127 },
+
+    "key_tap_left_0":  { "type": "keyTap", "hand": "left", "finger": 0, "note": 36, "velocity": 127 },
+    "key_tap_left_1":  { "type": "keyTap", "hand": "left", "finger": 1, "note": 38, "velocity": 127 },
+    "key_tap_left_2":  { "type": "keyTap", "hand": "left", "finger": 2, "note": 40, "velocity": 127 },
+    "key_tap_left_3":  { "type": "keyTap", "hand": "left", "finger": 3, "note": 41, "velocity": 127 },
+    "key_tap_left_4":  { "type": "keyTap", "hand": "left", "finger": 4, "note": 43, "velocity": 127 }
+  },
+
+  "_notes": [
+    "Scale: A natural minor — all notes are quantized to A B C D E F G.",
+    "velocity_curve 'soft' = gentle response, good for bass playing.",
+    "Increase circle_cc step for faster filter sweeps.",
+    "Minitaur is monophonic — polyphonic=false ensures single-note output."
+  ]
+}

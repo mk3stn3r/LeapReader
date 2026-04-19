@@ -1,5 +1,17 @@
 {
+  "name": "leap-midi",
+  "version": "1.0.0",
+  "description": "Leap Motion to MIDI bridge",
+  "main": "index.js",
+  "bin": { "leap-midi": "./index.js" },
+  "scripts": {
+    "start": "node index.js",
+    "list-ports": "node index.js --list-ports"
+  },
   "dependencies": {
-    "leapjs": "^1.1.1"
-  }
+    "easymidi": "^3.0.0",
+    "leapjs": "^0.6.4"
+  },
+  "engines": { "node": ">=16" },
+  "license": "MIT"
 }

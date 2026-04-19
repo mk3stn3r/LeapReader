@@ -1,0 +1,53 @@
+{
+  "_info": "Theremin-style mapping — right hand Y = pitch, left hand Y = volume CC, roll = vibrato.",
+
+  "midi_channel": 0,
+  "velocity_fixed": 90,
+  "velocity_curve": "linear",
+  "gesture_note_duration": 0.12,
+
+  "scale": {
+    "name": "chromatic",
+    "root": "C"
+  },
+
+  "right_hand": {
+    "axis":           "palm_y",
+    "note_min":       36,
+    "note_max":       84,
+    "trigger_mode":   "gate",
+    "polyphonic":     false,
+    "min_confidence": 0.3,
+    "cc_send": [
+      { "cc_number": 1,  "cc_axis": "roll",   "_comment": "Vibrato (pitch mod)" },
+      { "cc_number": 2,  "cc_axis": "pinch",  "_comment": "Tremolo / expression" }
+    ]
+  },
+
+  "left_hand": {
+    "axis":           "palm_y",
+    "note_min":       36,
+    "note_max":       84,
+    "trigger_mode":   "gate",
+    "polyphonic":     false,
+    "min_confidence": 0.3,
+    "cc_send": [
+      { "cc_number": 7,  "cc_axis": "palm_y", "_comment": "Volume — left hand height" },
+      { "cc_number": 11, "cc_axis": "grab",   "_comment": "Expression" }
+    ]
+  },
+
+  "circle_cc": null,
+
+  "gestures": {
+    "swipe_up":   { "type": "swipe", "direction": "up",   "note": 72, "velocity": 80 },
+    "swipe_down": { "type": "swipe", "direction": "down", "note": 48, "velocity": 80 }
+  },
+
+  "_notes": [
+    "Right hand height → pitch (full chromatic range C2-C6).",
+    "Left hand height  → CC7 volume, mimicking theremin antenna distance.",
+    "Right hand roll   → CC1 vibrato modulation.",
+    "Trigger mode 'gate': note held as long as hand is above sensor."
+  ]
+}
